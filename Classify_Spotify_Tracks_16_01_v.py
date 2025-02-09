@@ -322,7 +322,7 @@ def add_position_difference_to_tuples(sorted_lists, position_dict_list):
 
 
 # usage
-csv_file_path = "C:\\Users\\leomu\\OneDrive\\Desktop\\PhD\\Music Data\\Sleep Spotify\\maxmartin_spotify.csv"
+csv_file_path = "C:\\Users\\leomu\\OneDrive\\Desktop\\PhD\\Music Data\\Sleep Spotify\\sleep_music_spotify.csv"
 features = extract_features_from_csv(csv_file_path)
 #features = extract_features_from_csv_complexity(csv_file_path)
 #print(len(features))
@@ -372,7 +372,7 @@ sp_path = "C:\\Users\\lm9172\\OneDrive - Anglia Ruskin University\\Leo_PhD\\Chil
 
 #sorted_lists = [sorted_by_danceability, sorted_by_energy, sorted_by_tempo, sorted_by_valence, sorted_by_speechiness]
 sorted_lists = [sorted_by_danceability_and_valence, sorted_by_danceability_and_valence, sorted_by_energy_and_tempo, sorted_by_energy_and_tempo, sorted_by_energy_and_tempo, sorted_by_energy_and_tempo, sorted_by_energy_and_tempo, sorted_by_energy_and_tempo]
-output_file_path = "C:\\Users\\leomu\\OneDrive\\Desktop\\PhD\\Music Data\\Sleep Spotify\\sorted_maxmartin.csv"
+output_file_path = "C:\\Users\\leomu\\OneDrive\\Desktop\\PhD\\Music Data\\Sleep Spotify\\sorted_sleep_music.csv"
 
 #features = extract_features_from_csv_complexity(csv_file_path)
 #feature_keys = ['Danceability', 'Energy', 'Tempo', 'Valence', 'Speechiness', 'Complexity']  # Add 'Complexity
