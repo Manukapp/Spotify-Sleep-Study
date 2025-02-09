@@ -18,7 +18,7 @@ This repository contains Python scripts developed for a PhD research study at th
 3. Statistical analysis is performed using Python and SPSS.
 
 ## Contact:
-- **Researcher:** Leonardo Müller
+- **Researcher:** Leonardo Muller-Rodriguez
 - **Institution:** Cambridge Institute for Music Therapy Research
 - **Profile:** [https://www.aru.ac.uk/people/leonardo-muller](https://www.aru.ac.uk/people/leonardo-muller)
 
