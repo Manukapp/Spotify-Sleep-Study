@@ -322,7 +322,7 @@ def add_position_difference_to_tuples(sorted_lists, position_dict_list):
 
 
 # usage
-csv_file_path = "C:\\Users\\leomu\\OneDrive\\Desktop\\PhD\\Music Data\\Sleep Spotify\\sleep_music_spotify.csv"
+csv_file_path = "C:\\your\\path\\sleep_music_spotify.csv"
 features = extract_features_from_csv(csv_file_path)
 #features = extract_features_from_csv_complexity(csv_file_path)
 #print(len(features))
@@ -358,21 +358,11 @@ french_vulgar = []
 spanish_vulgar = []
 english_vulgar = []
 
-"""
-en_path = "C:\\Users\\lm9172\\OneDrive - Anglia Ruskin University\\Leo_PhD\\Children\\Spotify_Analysis\\en.txt"
-fr_path = "C:\\Users\\lm9172\\OneDrive - Anglia Ruskin University\\Leo_PhD\\Children\\Spotify_Analysis\\fr"
-sp_path = "C:\\Users\\lm9172\\OneDrive - Anglia Ruskin University\\Leo_PhD\\Children\\Spotify_Analysis\\es"
-"""
-
-#english_vulgar = get_word_list(en_path, english_vulgar)
-#spanish_vulgar = get_word_list(sp_path, spanish_vulgar)
-#french_vulgar = get_word_list(fr_path, french_vulgar)
-
 #Extraction of data 
 
 #sorted_lists = [sorted_by_danceability, sorted_by_energy, sorted_by_tempo, sorted_by_valence, sorted_by_speechiness]
 sorted_lists = [sorted_by_danceability_and_valence, sorted_by_danceability_and_valence, sorted_by_energy_and_tempo, sorted_by_energy_and_tempo, sorted_by_energy_and_tempo, sorted_by_energy_and_tempo, sorted_by_energy_and_tempo, sorted_by_energy_and_tempo]
-output_file_path = "C:\\Users\\leomu\\OneDrive\\Desktop\\PhD\\Music Data\\Sleep Spotify\\sorted_sleep_music.csv"
+output_file_path = "C:\\your\\path\\sorted_sleep_music.csv"
 
 #features = extract_features_from_csv_complexity(csv_file_path)
 #feature_keys = ['Danceability', 'Energy', 'Tempo', 'Valence', 'Speechiness', 'Complexity']  # Add 'Complexity
@@ -382,38 +372,9 @@ feature_keys = ['Danceability', 'Valence', 'Energy', 'Tempo', "Loudness", "Speec
 export_sorted_csv(sorted_lists, feature_keys, output_file_path)
 
 #export_sorted_csv_complex(features, feature_keys, output_file_path) #THIS IS TO EXPORT BASED ON THE FEATURES ONLY, using additional complexity measurement, it does not sort the lists.
-"""
-vulgar_songs = {}
-
-for i in range(0, len(sorted_by_danceability)):
-    track_name, feat = sorted_by_danceability[i]
-    artist_name = feat["Artist"]
-    #print(artist_name)
-
-    lyrics = scrape_lyrics_from_genius(track_name, artist_name)
-    #print(lyrics)
-
-    vulgar_words_found = find_vulgar_words_in_lyrics(lyrics, english_vulgar)
-    sp_vu_found = find_vulgar_words_in_lyrics(lyrics, spanish_vulgar)
-    fr_vu_found = find_vulgar_words_in_lyrics(lyrics, french_vulgar)
-
-    # Combine all found vulgar words
-    vulgar_words_found.update(sp_vu_found)
-    vulgar_words_found.update(fr_vu_found)
-    #print(len(vulgar_words_found))
-
-    if len(vulgar_words_found) > 0:
-        percent_vulgar = (len(lyrics) / len(vulgar_words_found)) * 100
-
-        vulgar_songs[track_name] = str(percent_vulgar) + "% of bad words in lyrics"
-
-    else:
-        vulgar_songs[track_name] = "0% of bad words in lyrics"
-    print("Vulgar words found:", vulgar_words_found)
-"""
 
 
-
+#TODO
 ## Create Pearson's correlation, create a py file that opens and extract info from many types of files
 ## Correlation function is indepedent, but takes in any list of numbers. Create other functions that extracts numbers into list (which is a distribution),
 ## Have function that takes out desired numbers (case-specific) and outputs distirbution to text file (systematic), which can then be analysed and correlated
