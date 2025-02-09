@@ -9,15 +9,7 @@ import time
 # Set your client ID and client secret. This one is for Mindfulness Children study
 client_id = 'f8e4f0d0d1af4c51aefbd601b6aa6a22'
 client_secret = 'd4037f119c2d430c859e4eafcd2c791f'
-"""
-## This one is for sleep study number 1
-client_id = "005e95613d414453a6cd102c34ed309d"
-client_secret = "4ae913a8bd3644c1b1a211c9f935ff0c"
 
-## This one is for sleep study number 2
-client_id = "21b88f60cf4547e7ae6a22d268c28dea"
-client_secret = "ee069919c0c14f468def1773424bc9b6"
-"""
 # Function to get access token
 def get_access_token(client_id, client_secret):
     
@@ -140,29 +132,13 @@ access_token = get_access_token(client_id, client_secret)
 
 # Replace with your playlist ID
 #playlist_id = "6hL4iXbj85bsJ97olgWqgU" # RadioMe First Songs playlist for heart rate analysis
-playlist_id = "34snmvef9WlaERnCTzpHsc" # Giampaolo's Anaesthetist Playlist - during surgery
-#playlist_id = "4LTUm9lBLuxS2sWvj2seWG" # High Energy Manukapp Songs
-#playlist_id = "3PEUTb9dGCOT9Uwq0bDs0r" # Top 40 Max Martin hits - does not work?
-#playlist_id = "37i9dQZF1EFCXQeQGoO7Oj" # Written by Max Martin - Number 1 producer by Billboard.com
-#playlist_id = "37i9dQZF1DX8SfyqmSFDwe" # Old School Reggaeton - ~4M followers, by Spotify
-#playlist_id = "7DdWVKKeJJokKU8nIs3B9D" # Musica de Cuna de Luna cresciente - Aurora Cuna
-#playlist_id = "37i9dQZF1DWY7IeIP1cdjF" # Baila Reggaeton - ~11M followers by Spotify
-#playlist_id = "37i9dQZF1DX76Wlfdnj7AP" # Beast Mode Spotify Playlist - ~11M followers to 'GET YOUR BEAST MODE ON'  
-#playlist_id = "4bWVVkRuk2tsbQPTdUjHN0" #Luna Creciente de cuna - Children's Sleep Music with >100M listens
-#playlist_id = "3n2bodrPmMDqDHgGahPoSy" #Theta Sleep Playlist - Binaural beat soundtracks
-#playlist_id = "59cND945NisAIf4O1LJuVx" #Soundtrack to Sleep Playlist - Film & video game low arousal music
-#playlist_id = "1Mi0LJZyy1Y3da8OiBrpN5" #DREAM REM playlist - anecdotally most effective sleep music
-#playlist_id = '2PPLv2Mf7dzFTzKeJLlqDo' # Probably the kid's fav music playlist
-#playlist_id = "12AI2xZxmkSyTIUlA0EQQ5" # Comedy by Rowan Atkinson, and John Cleese & crew
-#playlist_id = "6dvpf9MiBzlMbvMwzN7iA6"
-#playlist_id = "37i9dQZF1DWZd79rJ6a7lp" #Official Sleep Spotify playlist
+playlist_id = "37i9dQZF1DWZd79rJ6a7lp" #Official Sleep Spotify playlist
 #playlist_id = "37i9dQZF1DXdzGIPNRTvyN" #Official Natural sleep music Spotify playlist
 #playlist_id = "37i9dQZF1DXa1rZf8gLhyz" #Official Jazz Sleep Playlist
 #playlist_id = "37i9dQZF1DXbcPC6Vvqudd" #Official Night Rain playlist
 #playlist_id = "37i9dQZF1DWYcDQ1hSjOpY" #Official Deep Sleep Playlist
 #playlist_id = "37i9dQZF1DXbADqT0j1Cxt" #Official Lullabies for babies playlist
 #playlist_id = "37i9dQZF1DX8Sz1gsYZdwj" #Official Classical music for sleep playlist
-#playlist_id = "1aQsmaWYuWYs1SX5E0kp3A" #groupe musique
 
 # Get tracks from the playlist
 tracks = get_playlist_tracks(playlist_id, access_token)
@@ -208,31 +184,5 @@ for track in tracks:
 
 #print(track_info)
 
-output_file_path = "C:\\Users\\leomu\\OneDrive\\Desktop\\PhD\\Music Data\\Sleep Spotify\\giampaolo_playlist_spotify.csv"
+output_file_path = "C:\\Users\\leomu\\OneDrive\\Desktop\\PhD\\Music Data\\Sleep Spotify\\sleep_playlist_spotify.csv"
 export_csv(track_info, output_file_path)
-
-"""
-# Convert track_info keys (track names) to a sorted list
-track_names = sorted(list(track_info.keys()))
-
-# Get the first track's name
-first_track_name = track_names[0]
-
-# Get the first track's data
-first_track_data = track_info[first_track_name]
-
-# Extract the first key and its value in the Features of the first track
-first_feature_key = list(first_track_data['Features'].keys())[0]
-first_feature_value = first_track_data['Features'][first_feature_key]
-
-# Extract the first section
-first_section = first_track_data['Sections'][0]
-
-# Extract the first key and its value from the first section
-first_section_key = list(first_section.keys())[0]
-first_section_value = first_section[first_section_key]
-
-print(f"First Track: {first_track_name}")
-print(f"First Feature of Track: {first_feature_key} = {first_feature_value}")
-print(f"First Feature of First Section: {first_section_key} = {first_section_value}")
-"""
