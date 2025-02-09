@@ -184,5 +184,5 @@ for track in tracks:
 
 #print(track_info)
 
-output_file_path = "C:\\Users\\leomu\\OneDrive\\Desktop\\PhD\\Music Data\\Sleep Spotify\\sleep_playlist_spotify.csv"
+output_file_path = "C:\\your\\path\\sleep_playlist_spotify.csv"
 export_csv(track_info, output_file_path)
