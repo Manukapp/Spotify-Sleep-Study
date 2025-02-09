@@ -14,7 +14,7 @@ This repository contains Python scripts developed for a PhD research study at th
 
 ## How It Works:
 1. Run `get_spotify_data.py` to fetch track features.
-2. The script saves data into `spotify_tracks.csv`.
+2. The script saves data into `Classify_Spotify_Tracks_16_01_v.py`.
 3. Statistical analysis is performed using Python and SPSS.
 
 ## Contact:
